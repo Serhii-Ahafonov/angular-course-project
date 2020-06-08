@@ -17,13 +17,19 @@ import { environment } from 'src/environments/environment';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { RegisterComponent } from './auth/components/register/register.component';
+import { UserAccountComponent } from './auth/components/user-account/user-account.component';
+import { FoundStaffComponent } from './pages/found-staff/found-staff.component';
+import { LostStaffComponent } from './pages/lost-staff/lost-staff.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserAccountComponent,
+    FoundStaffComponent,
+    LostStaffComponent
   ],
   imports: [
     BrowserModule,

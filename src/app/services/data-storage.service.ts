@@ -15,7 +15,12 @@ export class DataStorageService {
 
   addUserDataToDB(id,user){
     this.itemsCollection.doc(id).set(user)
-  }
+  };
 
+  upadteUserDataOnDB(id,user){
+    this.itemsCollection.doc(id).set(user)
+  };
+
+  
   
 }

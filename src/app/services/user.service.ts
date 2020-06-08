@@ -16,6 +16,7 @@ import { DataStorageService } from './data-storage.service';
 export class UserService {
   usersCollection: AngularFirestoreCollection<any>;
   user$: Observable<User>;
+  userId:string;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -27,6 +28,7 @@ export class UserService {
     this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         if (user){
+          this.userId = user.uid;
           return this.afs.doc<User>(`Users/${user.uid}`).valueChanges()
         } else {
           return of(null)
@@ -39,12 +41,12 @@ export class UserService {
 
   createUser(userData){
 
-    let { name, email, password } = userData
+    let { name, surname,age,email, password } = userData
 
-    this.afAuth.createUserWithEmailAndPassword(email,password)
+    this.afAuth.createUserWithEmailAndPassword(email, password)
     .then(res =>{
-      this.dss.addUserDataToDB(res.user.uid,{name, email, password})
-      // this.router.navigate()
+      this.dss.addUserDataToDB(res.user.uid,{name, surname, age, email})
+      this.router.navigate(["../home"])
     })
     .catch(err =>{
       alert(err.message)

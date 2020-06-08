@@ -1,0 +1,65 @@
+* {
+    background-color: darkgray;
+}
+
+.found{
+    background-image: url(https://media.newyorker.com/photos/59097dcdc14b3c606c1098d4/1:1/w_1594,h_1594,c_limit/170213_r29427.jpg);
+    border: blanchedalmond 2px solid;
+}
+.lost{
+    background-image: url(https://pbs.twimg.com/media/DvB30erWoAACOkr.jpg);
+    border: blanchedalmond 2px solid;
+}
+.lost , .found{
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:600px;
+    width:100%;
+    
+}
+/* div{
+    border: black 1px solid;
+} */
+.found-main{
+    padding: 10px 10px 10px 30px;
+    border-right: blanchedalmond;
+}
+.lost-main{
+    padding: 10px 30px 10px 10px;
+    border-left: blanchedalmond;
+}
+.quastion{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+.quastionToUser1{
+    position: absolute;
+    background: none;
+    color: #ffffff; 
+    font: bold;
+    font-size: 2rem;
+    text-align: center;
+    transform: rotate(-50deg);
+    top: 250px;
+    left: 70px;
+    line-height: 100px;
+}
+.quastionToUser2{
+    position: absolute;
+    background: none;
+    color: #ffffff; 
+    font: bold;
+    font-size: 2rem;
+    text-align: center;
+    transform: rotate(-20deg);
+    top: 140px;
+    right: 50px;
+    line-height: 50px;
+}
